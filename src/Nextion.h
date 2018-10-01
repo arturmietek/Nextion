@@ -14,6 +14,7 @@ class Nextion {
   public:
     void setComponentText(String component, String txt);
     void setBackLightPercent(int percent);
+    void setVisiblity(String component, int visible);
 };
 
 #endif

@@ -23,3 +23,13 @@ void Nextion::setBackLightPercent(int percent) {
   	Nextion::sendCommand(command.c_str());
 }
  
+void Nextion::setVisiblity(String component, int visible) {
+	if (visible > 1) {
+		visible = 1;
+	}
+	if (visible < 0) {
+		visible = 0;
+	}
+	String componentText = "vis " + component + "," + String(visible);
+  	Nextion::sendCommand(componentText.c_str());
+}
